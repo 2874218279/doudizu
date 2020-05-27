@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>注册</title>
+<link href="css/main.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/iconfont.css">
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css" />
+<link href="css/hedBtm.css" rel="stylesheet" type="text/css" />
+<script src="js/jquery.js"></script>
+<style>
+body {
+	font:Arial, Helvetica, sans-serif;
+    font-size:16px;
+	color:#000;
+	    background-image: linear-gradient(to right, #82c0ef80, #9283bf9c);
+	text-align:center;
+}
+</style>
+</head>
+
+<body>
+ <script type="text/javascript" src="js/header.js"></script>   
+<div class="login-box">
+<div class="box-con tran">
+<form action="login.html" onSubmit="return beforeSubmit(this);" name="form" id="formz">
+<div class="signup f-l">
+    <div class="form-group">
+        <div class="signup-form">
+        <input type="text" placeholder="邮箱" class="email-mobile" name="Email" >
+        </div>
+    <span class="error-notic">邮箱格式不正确</span>
+    </div>
+    <div class="signup-email">
+        <div class="form-group">
+        <input type="text" placeholder="您的名字" name="Name">
+        </div>
+        <div class="form-group">
+        <input type="password" placeholder="密码（字母、数字，至少6位）" name="password">
+        <span class="error-notic">密码长度不够</span>
+        </div>
+        <div class="form-group">
+        <input type="submit" value="注册" name="submit" class="Submit" />
+        </div>
+    </div>
+
+  <div class="from-line"></div>
+    <div class="form-group">
+    <a href="login.html" class="move-login a-tag tran blue-border">已有帐号？登录<i class="iconfont tran"></i></a>
+    </div>
+
+</div>
+</form>
+</div>
+</div>
+<!--底部 -->
+<div class="footer">
+  <div class="footerBtm container">
+    <div class="row">
+      <div class="col-md-4 LogoI">
+        <p class="btLogo"><img src="images/logoBtm_27.png" /></p>
+        <p class="fontW"><span style="display:block;">To make a living. To make a life. </span><span>不仅是活着，还有生活！</span></p>
+      </div>
+      <div class="col-md-4">
+      	<div class="ContectL">
+        <p>联系我们</p>
+        <ul>
+        <li>地址：北京市海淀区北京理工大学</li>
+        <li>客服热线：010-87120000</li>
+        <li><a href="mailto:demo@demo.com">客服邮箱：demo@demo.com</a></li>
+        </ul>
+        </div>
+      </div>
+      <div class="col-md-4  ewmI">
+      	<h2>官网公众号</h2>
+        <img src="images/idexEwm_30.jpg">
+      </div>
+    </div>
+  </div>
+  <div class="btmF">Copyright © 1999-2018 All Rights Reserved    <a href="">京公网安备XXXX010XXXXXXX号</a></div>
+</div>
+
+<script>
+ function beforeSubmit(form) {
+	 if (form.Email.value.length<6){
+		alert('邮箱不能为空，请输入正确邮箱格式！');
+		form.Email.focus();
+		return false;
+		}
+		if (form.Name.value==''){
+		alert('姓名不能为空！');
+		form.Name.focus();
+		return false;
+		}
+		if(form.password.value.length<6){
+		alert('密码大于6位数');
+		form.password.focus();
+		return false;
+		}
+         alert("恭喜您注册成功获得了5个积分！");  
+         return true;
+
+}
+
+	</script>
+</body>
+</html>

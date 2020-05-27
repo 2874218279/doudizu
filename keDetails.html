@@ -1,0 +1,310 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<title>课程详情</title>
+<link href="css/main.css" rel="stylesheet" type="text/css" />
+<link href="css/hedBtm.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="css/swiper.min.css">
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css" />
+<script src="https://code.jquery.com/jquery-1.2.3.min.js"></script>
+<script type="text/javascript" src="js/dh2.js"></script>
+<script type="text/javascript" src="js/modh.js"></script>
+</head>
+<body>
+<script type="text/javascript" src="js/header.js"></script>
+
+<!--课程 -->
+<div class="kcxq">
+  <div class="container-1200 container">
+	<div class="row">
+    	<div class="col-md-7">
+            <video controls src="video/生物学1.mp4" width="100%">
+            </video>
+        </div>
+       <div class="col-md-5">
+       <h1 class="page-tt"><span class="premium-tag-react"></span><span class="title-main">JVM虚拟机底层原理分析与性能优化5.27-         助理微信：18932447130</span></h1>
+       <p class="gy"><span>534人 购买</span><span>好评度 -</span></p>
+       <div class="class-content js-term-item js-term-baseinfo class-content--no-des active" data-idx="0" data-termid="102662237">
+                <h2 class="hidden-clip">jvm虚拟机5.27</h2>
+                <p class="class-date">
+                  上课时间：05月27日 至 25年05月
+                </p>
+                <i class=""></i>
+         </div>
+         <a id="KcIntegral">积分<span>1</span></a>
+         <div class="oper-bar" id="js_btn_bar" auto-test="mod_oper_bar">
+           <a href="buy.html" class="im-btn general-btn-main institution-btn-main btn-default btn-l"><span class="general-btn-tip institution-btn-tip"></span><span class="general-btn-txt institution-btn-txt">立即购买</span></a>            
+            <a class="btn-outline btn-contact-notel js-contact-btn" style="" data-position="video" onclick="$('#pjConten').focus();">
+                <span class="btn-advice-tel">
+                    <i class="item-icon icon-font i-comment js-icon-msg" style=""></i>
+                    <i class="item-icon icon-font i-qq js-icon-qidian" style="display:none"></i>评价
+                </span>
+             </a>
+             <a class="btn-contact-notel">下载</a>
+        
+        </div>
+       </div>
+    </div>
+  </div>
+<div class="pj">
+  <div class="container">
+      <div class="row">
+             <div class="contentTabs  col-md-7">
+                    <div class="tabs-tt-bar" id="js_tab">
+                        <h2 class="tabs-tt" ref="js_comment_tab">评论(<span class="num js-comment-total" id="pj_count">3</span>)</h2>
+                    </div>
+                   <div>  <!-- class="msg-inner" -->
+					  <!-- <i class="icon-font icon-msg-large i-alert"></i> <div class="msg-text">暂无评论</div> -->
+					  <div class="alert alert-success alert-dismissible" id="cg_alert_msg" style="margin-bottom:10px;margin-top:-10px;height:30px;line-height:0px;display:none;">
+						<button type="button" class="close" data-dismiss="alert" style="line-height: 5px;" onclick="$('#cg_alert_msg').hide()">&times;</button>
+						<strong>发表成功！</strong>
+					  </div>
+					  <div class="alert alert-warning alert-dismissible" id="jg_alert_msg" style="margin-bottom:10px;margin-top:-10px;height:30px;line-height:0px;display:none;">
+						<button type="button" class="close" data-dismiss="alert" style="line-height: 5px;" onclick="$('#jg_alert_msg').hide()">&times;</button>
+						<strong id="strong_msg"></strong>
+					  </div>
+					  <div>
+						<label style="font-size:13px;">评价星级：</label>
+						<input type="radio" name="grade" id="grade1" value="1" style="position:relative;top:1px;">
+						<label for="grade1" style="font-weight:200;">1星</label>&nbsp;&nbsp;
+						<input type="radio" name="grade" id="grade2" value="2" style="position:relative;top:1px;">
+						<label for="grade2" style="font-weight:200;">2星</label>&nbsp;&nbsp;
+						<input type="radio" name="grade" id="grade3" value="3" style="position:relative;top:1px;">
+						<label for="grade3" style="font-weight:200;">3星</label>&nbsp;&nbsp;
+						<input type="radio" name="grade" id="grade4" value="4" style="position:relative;top:1px;">
+						<label for="grade4" style="font-weight:200;">4星</label>&nbsp;&nbsp;
+						<input type="radio" name="grade" id="grade5" value="5" style="position:relative;top:1px;">
+						<label for="grade5" style="font-weight:200;">5星</label>
+						<div>
+							<textarea class="form-control" rows="3" id="pjConten" placeholder="请输入评价内容..."></textarea>
+							<button class="btn btn btn-primary" type="button" style="margin-top:10px;margin-bottom:10px;float:right;" onclick="comeOut()">发 表</button>
+						</div>
+					  </div>
+					  <div style="clear: both;">
+						<b style="padding-left: 5px;color: white;font-size: 14px;background: #337ab7;padding: 5px 15px 5px 13px;border-radius: 3px;">★评价信息</b>
+						<table id="dataTables" class="table table-hover" style="margin-top:10px;">
+							<thead>
+								<tr style="border-bottom:0px;">
+									<td>评价星级</td>
+									<td>评价内容</td>
+									<td>评价用户</td>
+									<td>评价时间</td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td style="color:orange;font-size:14px;font-family:黑体;">★★★★☆</td>
+									<td>很喜欢，希望有后续课程。</td>
+									<td>user_001</td>
+									<td>2020-03-02</td>
+								</tr>
+								<tr>
+									<td style="color:orange;font-size:14px;font-family:黑体;">★★★★★</td>
+									<td>非常棒的课程，顶顶顶。</td>
+									<td>user_002</td>
+									<td>2020-04-02</td>
+								</tr>
+								<tr>
+									<td style="color:orange;font-size:14px;font-family:黑体;">★★★☆☆</td>
+									<td>不能快速理解并用到题目中去 有待改进！</td>
+									<td>user_003</td>
+									<td>2020-05-02</td>
+								</tr>
+							</tbody>
+						</table>
+					  </div>
+				   </div>
+              </div>
+            <div class="aside-blocks col-md-4">
+                <div class="aside-block block--agency" auto-test="mod_course_aside_agency">
+                <div class="block-bd">
+                <h4 class="agency-tt">
+                <div class="tt-cover-url">
+                <a class="js-agency-cover" href="https://tuling.ke.qq.com" target="_blank">
+                <img src="images/logo_03.png" alt="永胜学院" width="64" height="64">
+                </a>
+                </div>
+                </h4>
+                <ul class="tree-list">
+                <li>
+                <p class="item-tt">好评度</p>
+                <span class="item-num">
+                
+                93%
+                </span>
+                </li>
+                <li>
+                <p class="item-tt">课程数</p>
+                <span class="item-num js-item-num" data-num="64">64</span>
+                </li>
+                <li>
+                <p class="item-tt">学习人次</p>
+                <span class="item-num js-item-num" data-num="467193">46万</span>
+                </li>
+                </ul>
+                <div class="agency-summary">永胜学院致力发展在线教育，打造一流的优质服务，成就一线的城市人才，专注于互联网、区块链、大数据、人工智能技术的研究。讲师团队均来自于互联网公司，拥有5年线下的培训经验，企业经验丰富实力派老师，可以真正帮助学员快速提升能力。我们的教学理念是：学以致用，所学即为所用！让学习成为一种习惯~ </div>
+                </div>
+                </div>
+                
+                
+                
+                <div class="aside-block block--contact" auto-test="mod_course_aside_contact">
+                <h3 class="block-tt">联系方式</h3>
+                <div class="block-bd">
+                <ul class="contact-list">
+                
+                <li class="">
+                <i class="item-icon icon-font i-group"></i>
+                <a href="" class="item-tt js-group-entrance" title="A36JVM虚拟底层原理分析" data-gc="540363904" target="_blank">
+                A36JVM虚拟底层原理分析
+                </a>
+                <p class="gray">群号: 540363904</p>
+                </li>
+                
+                </ul>
+                <ul class="contact-list">
+                
+                </ul>
+                </div>
+                </div>
+                
+                </div>	
+            </div>
+      </div>
+  </div>
+ 
+</div>
+
+
+<!--底部 -->
+<div class="footer">
+  <div class="footerBtm container">
+    <div class="row">
+      <div class="col-md-4 LogoI">
+        <p class="btLogo"><img src="images/logoBtm_27.png" /></p>
+        <p class="fontW"><span style="display:block;">To make a living. To make a life. </span><span>不仅是活着，还有生活！</span></p>
+      </div>
+      <div class="col-md-4">
+      	<div class="ContectL">
+        <p>联系我们</p>
+        <ul>
+        <li>地址：北京市海淀区北京理工大学</li>
+        <li>客服热线：010-87120000</li>
+        <li><a href="mailto:demo@demo.com">客服邮箱：demo@demo.com</a></li>
+        </ul>
+        </div>
+      </div>
+      <div class="col-md-4  ewmI">
+      	<h2>官网公众号</h2>
+        <img src="images/idexEwm_30.jpg">
+      </div>
+    </div>
+  </div>
+  <div class="btmF">Copyright © 1999-2018 All Rights Reserved    <a href="">京公网安备XXXX010XXXXXXX号</a></div>
+</div>
+<!--右侧悬浮 -->
+<div class="rightSidebar">
+  <a href="javascript:volid(0)" class="rSt top">
+    <div class="topContent">
+      <div class="TopImg"><img src="images/indexSider_07.jpg" alt="永胜学院" title="永胜学院"></div>
+      <p>置顶</p>
+    </div>
+  </a>
+  <a class="rSt">
+     <div class="topContent">
+      <div class="TopImg"><img src="images/zs.jpg" alt="永胜学院" title="永胜学院"></div>
+      <p>免费热线</p>
+    </div>
+    <div class="hc">
+    电话：010-87120000
+    </div>
+  </a>
+    <a href="contact.html" class="rSt">
+     <div class="topContent">
+      <div class="TopImg"><img src="images/ly.jpg" alt="永胜学院" title="永胜学院"></div>
+      <p>立即留言</p>
+    </div>
+  </a>
+</div>
+<!-- Swiper JS --> 
+<script>
+  $(".top").click(function(){
+	$("html,body").animate({scrollTop:0},500);
+
+	});
+</script>
+<script src="js/swiper.min.js"></script> 
+
+<!-- Initialize Swiper --> 
+<script>
+    var swiper = new Swiper('.swiper-container', {
+      speed: 600,
+      parallax: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+	// 发表评论
+	function comeOut() {
+		var grade = $('input[name="grade"]:checked').val();
+		var pjConten = $('#pjConten').val();
+		if (grade == "" || typeof(grade)==="undefined") {
+			$("#strong_msg").text("请选择评价星级！");
+			$("#cg_alert_msg").hide();
+			$("#jg_alert_msg").show();
+			return false;
+		}
+		if (pjConten == "") {
+			$("#strong_msg").text("请输入评价内容！");
+			$("#cg_alert_msg").hide();
+			$("#jg_alert_msg").show();
+			return false;
+		}
+		$("#jg_alert_msg").hide();
+		var stars = "";
+		for (var i = 0; i < 5; i++) {
+			if (i < grade) {
+				stars += '★';
+			} else {
+				stars += '☆';
+			}
+		}
+		var html = "<tr>";
+		html += "<td style='color:orange;font-size:14px;font-family:黑体;'>"+stars+"</td>";
+		html += "<td>"+pjConten+"</td>";
+		html += "<td>测试用户</td>";
+		html += "<td>"+getNowFormatDate()+"</td>";
+		html += "</tr>";
+		$("#dataTables tbody").append(html);
+		var pj_count = $("#pj_count").text().trim();
+		$("#pj_count").text(parseInt(pj_count)+1);
+		$('#pjConten').val("");
+		$('[name=grade]').attr("checked",false);
+		$("#cg_alert_msg").show();
+	}
+	// 获取当前日期
+	function getNowFormatDate() {
+		var date = new Date();
+		var seperator1 = "-";
+		var year = date.getFullYear();
+		var month = date.getMonth() + 1;
+		var strDate = date.getDate();
+		if (month >= 1 && month <= 9) {
+			month = "0" + month;
+		}
+		if (strDate >= 0 && strDate <= 9) {
+			strDate = "0" + strDate;
+		}
+		var currentdate = year + seperator1 + month + seperator1 + strDate;
+		return currentdate;
+	}
+  </script> 
+</body>
+</html>

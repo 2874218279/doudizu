@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<title>login</title>
+<link href="css/main.css" rel="stylesheet" type="text/css" />
+<link href="css/hedBtm.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="css/swiper.min.css">
+<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css" />
+<script src="https://code.jquery.com/jquery-1.2.3.min.js"></script>
+<script type="text/javascript" src="js/dh2.js"></script>
+<script type="text/javascript" src="js/modh.js"></script>
+<style>
+body {
+	font:Arial, Helvetica, sans-serif;
+    font-size:16px;
+	color:#000;
+	    background-image: linear-gradient(to right, #82c0ef80, #9283bf9c);
+	text-align:center;
+}
+</style>
+</head>
+<body>
+ <script type="text/javascript" src="js/header.js"></script>        
+                       <!-- 包含整个内容的背景图 -->
+   <div class="bg"><!-- <img src="images/bg_02.png" class="img-bg" /> --></div>
+         <!--标题  -->
+ 
+            
+         
+           <!--包含整个div -->
+    <div id="wrapper">
+                                
+                             <!--登陆框制作-->
+     <div class="loginmodal">
+             
+             <div class="login-header">
+                    用户登录
+              </div>
+               
+                <!--登陆表单制作-->
+                     <div class="login-body">
+                       <form class="form-login" action="index.html" method="post" id="loginFrom" name="form1" onSubmit="return beforeSubmit(this);">
+                       <div class="passwordWap">
+                           <div class="form-group">
+                                   <input type="text" name="login" id="login" placeholder="请输入用户名" class="input-user"  required />
+                                   <label class="icon-user" for="login"></label></div>
+                                   <p id="loginWapText">长度1~12个字符</p>
+                         </div>
+                         <div class="passwordWap">
+                               <div class="form-group">
+                                  <input type="password" name="password" id="password" placeholder="请输入密码" class="input-password"required />
+                                   <label class="icon-envelope" for="password"></label>
+                                   </div>
+                                   <p id="passwordWapText">密码大于6位数</p>
+                         </div>
+                                     <div class="form-group">
+                                         <input type="submit" name="submit" id="submit" class="input-sbt" value="登录"   />
+                         </div>
+                       </form>
+                      </div>
+                     <!-- 表单结束 -->
+              </div>
+                 </div>
+
+              <div class="guild ">
+                 <p>温馨提示：<br />
+                     1：如您是第一次访问本网站，请先<a href="zc.html">注册</a></span><br />
+                    
+                     </div>
+                    
+<!--底部 -->
+<div class="footer">
+  <div class="footerBtm container">
+    <div class="row">
+      <div class="col-md-4 LogoI">
+        <p class="btLogo"><img src="images/logoBtm_27.png" /></p>
+        <p class="fontW"><span style="display:block;">To make a living. To make a life. </span><span>不仅是活着，还有生活！</span></p>
+      </div>
+      <div class="col-md-4">
+      	<div class="ContectL">
+        <p>联系我们</p>
+        <ul>
+        <li>地址：北京市海淀区北京理工大学</li>
+        <li>客服热线：010-87120000</li>
+        <li><a href="mailto:demo@demo.com">客服邮箱：demo@demo.com</a></li>
+        </ul>
+        </div>
+      </div>
+      <div class="col-md-4  ewmI">
+      	<h2>官网公众号</h2>
+        <img src="images/idexEwm_30.jpg">
+      </div>
+    </div>
+  </div>
+  <div class="btmF">Copyright © 1999-2018 All Rights Reserved    <a href="">京公网安备XXXX010XXXXXXX号</a></div>
+</div>
+
+<script>
+ function beforeSubmit(form) {
+		if (form.login.value==''){
+		alert('用户名不能为空！');
+		form.login.focus();
+		return false;
+		}
+		if(form.password.value.length<6){
+		alert('密码大于6位数');
+		form.password.focus();
+		return false;
+		}
+         alert("恭喜您登录成功获得了2个积分！");  
+         return true;
+
+}
+</script>
+</body>
+</html>
