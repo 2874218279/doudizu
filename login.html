@@ -96,7 +96,7 @@ body {
   </div>
   <div class="btmF">Copyright © 1999-2018 All Rights Reserved    <a href="">京公网安备XXXX010XXXXXXX号</a></div>
 </div>
-
+<script type="text/javascript" src="js/jquery-cookie/jquery.cookie.js"></script>
 <script>
  function beforeSubmit(form) {
 		if (form.login.value==''){
@@ -109,7 +109,16 @@ body {
 		form.password.focus();
 		return false;
 		}
-         alert("恭喜您登录成功获得了2个积分！");  
+         alert("恭喜您登录成功，获得了2个积分！");
+		$.cookie('yssyxt_login_status', '1');
+		 console.log("登录状态cookie：" + $.cookie('yssyxt_login_status'));
+		var yssyxt_jifen = $.cookie('yssyxt_jifen');
+		if (yssyxt_jifen == '' || typeof(yssyxt_jifen) === 'undefined') {
+			$.cookie('yssyxt_jifen', '2');
+		} else {
+			$.cookie('yssyxt_jifen', '7');
+		}
+		console.log("登录积分cookie：" + $.cookie('yssyxt_jifen'));
          return true;
 
 }

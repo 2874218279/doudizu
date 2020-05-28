@@ -303,7 +303,29 @@
 <script src="js/swiper.min.js"></script> 
 
 <!-- Initialize Swiper --> 
+<script type="text/javascript" src="js/jquery-cookie/jquery.cookie.js"></script>
 <script>
+	$(function() {
+		// 判断是否登录
+		var yssyxt_login_status = $.cookie('yssyxt_login_status');
+		console.log("首页状态测试cookie：" + $.cookie('yssyxt_login_status'));
+		if (yssyxt_login_status == '' || typeof(yssyxt_login_status) === 'undefined') {
+			$(".header1 .login").show();
+			$(".loginH").hide();
+		} else {
+			$(".header1 .login").hide();
+			$(".loginH").show();
+			var yssyxt_jifen = $.cookie('yssyxt_jifen');
+			console.log("首页积分测试cookie：" + $.cookie('yssyxt_jifen'));
+			$("#Integral").text("积分"+yssyxt_jifen);
+		}
+		// 退出登录
+		$("#Quit").click(function(){
+			$.cookie('yssyxt_login_status', null);
+			$.cookie('yssyxt_jifen', null);
+			location.reload();
+		})
+	})
     var swiper = new Swiper('.swiper-container', {
       speed: 600,
       parallax: true,
@@ -316,6 +338,6 @@
         prevEl: '.swiper-button-prev',
       },
     });
-  </script> 
+  </script>
 </body>
 </html>

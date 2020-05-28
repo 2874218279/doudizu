@@ -80,7 +80,7 @@ body {
   </div>
   <div class="btmF">Copyright © 1999-2018 All Rights Reserved    <a href="">京公网安备XXXX010XXXXXXX号</a></div>
 </div>
-
+<script type="text/javascript" src="js/jquery-cookie/jquery.cookie.js"></script>
 <script>
  function beforeSubmit(form) {
 	 if (form.Email.value.length<6){
@@ -99,8 +99,9 @@ body {
 		return false;
 		}
          alert("恭喜您注册成功获得了5个积分！");  
+		 $.cookie('yssyxt_jifen', '5');
+		 console.log("注册积分cookie：" + $.cookie('yssyxt_jifen'));
          return true;
-
 }
 
 	</script>
