@@ -8,7 +8,7 @@
 <link href="css/hedBtm.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="css/swiper.min.css">
 <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css" />
-<script src="https://code.jquery.com/jquery-1.2.3.min.js"></script>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
 <script type="text/javascript" src="js/dh2.js"></script>
 <script type="text/javascript" src="js/modh.js"></script>
 </head>
@@ -29,11 +29,13 @@
        <div class="class-content js-term-item js-term-baseinfo class-content--no-des active" data-idx="0" data-termid="102662237">
        
                 <p class="class-date">
-                内容主要涉及JavaScript的语言特点、JavaScript与浏览器的交互、更高级的JavaScript技巧，以及与在Web应用程序中部署JavaScript解决方案有关的问题，如错误处理、调试、安全性、优化/混淆化、XML和Web服务，最后介绍应用所有这些知识来创建动态用户界面。
+                内容主要涉及JavaScript的语言特点、与浏览器交互、更高级的技巧，以及与在Web应用程序中部署JavaScript解决方案有关的问题，如错误处理、调试、安全性、优化/混淆化、XML和Web服务，最后介绍应用所有这些知识来创建动态用户界面。
                 </p>
                 <i class=""></i>
          </div>
+		  <a id="KcIntegral" style="margin-bottom: -15px;">积分<span>2</span></a>
          <div class="oper-bar" id="js_btn_bar" auto-test="mod_oper_bar">      
+			<a href="" class="im-btn general-btn-main institution-btn-main btn-default btn-l"><span class="general-btn-tip institution-btn-tip"></span><span class="general-btn-txt institution-btn-txt" onclick="buy()">立即购买</span></a>       
             <a class="btn-outline btn-contact-notel js-contact-btn" style="" data-position="video" onclick="$('#pjConten').focus();">
                 <span class="btn-advice-tel">
                     <i class="item-icon icon-font i-comment js-icon-msg" style=""></i>
@@ -239,9 +241,32 @@
 	});
 </script>
 <script src="js/swiper.min.js"></script> 
-
 <!-- Initialize Swiper --> 
+<script type="text/javascript" src="js/jquery-cookie/jquery.cookie.js"></script>
 <script>
+	$(function() {
+		// 判断是否登录
+		var yssyxt_login_status = $.cookie('yssyxt_login_status');
+		console.log("状态测试cookie：" + $.cookie('yssyxt_login_status'));
+		if (yssyxt_login_status == '' || typeof(yssyxt_login_status) === 'undefined') {
+			$(".header1 .login").show();
+			$(".loginH").hide();
+		} else {
+			$(".header1 .login").hide();
+			$(".loginH").show();
+			var yssyxt_jifen = $.cookie('yssyxt_jifen');
+			console.log("积分测试cookie：" + $.cookie('yssyxt_jifen'));
+			$("#Integral").text("积分"+yssyxt_jifen);
+		}
+		// 退出登录
+		$("#Quit").click(function(){
+			$(".header1 .login").show();
+			$(".loginH").hide();
+			$.cookie('yssyxt_login_status', null);
+			$.cookie('yssyxt_jifen', null);
+			location.reload();
+		})
+	})
     var swiper = new Swiper('.swiper-container', {
       speed: 600,
       parallax: true,
@@ -254,6 +279,23 @@
         prevEl: '.swiper-button-prev',
       },
     });
+	// 购买
+	function buy() {
+		var yssyxt_login_status = $.cookie('yssyxt_login_status');
+		if (yssyxt_login_status == '' || typeof(yssyxt_login_status) === 'undefined') {
+			alert("您还未登录，请先登录！");
+			return false;
+		}
+		var yssyxt_jifen = $.cookie('yssyxt_jifen');
+		if (parseInt(yssyxt_jifen) - 2 < 0) {
+			alert("您当前积分不足，请先进行购买！");
+			return false;
+		} else {
+			$.cookie('yssyxt_jifen', parseInt(yssyxt_jifen) - 2);
+			$("#Integral").text("积分"+parseInt(yssyxt_jifen) - 2);
+			alert("恭喜您购买成功");
+		}
+	}
 	// 发表评论
 	function comeOut() {
 		var grade = $('input[name="grade"]:checked').val();

@@ -8,7 +8,7 @@
 <link href="css/hedBtm.css" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="css/swiper.min.css">
 <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css" />
-<script src="https://code.jquery.com/jquery-1.2.3.min.js"></script>
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
 <script type="text/javascript" src="js/dh2.js"></script>
 <script type="text/javascript" src="js/modh.js"></script>
 </head>
@@ -252,9 +252,32 @@
 	});
 </script>
 <script src="js/swiper.min.js"></script> 
-
 <!-- Initialize Swiper --> 
+<script type="text/javascript" src="js/jquery-cookie/jquery.cookie.js"></script>
 <script>
+	$(function() {
+		// 判断是否登录
+		var yssyxt_login_status = $.cookie('yssyxt_login_status');
+		console.log("状态测试cookie：" + $.cookie('yssyxt_login_status'));
+		if (yssyxt_login_status == '' || typeof(yssyxt_login_status) === 'undefined') {
+			$(".header1 .login").show();
+			$(".loginH").hide();
+		} else {
+			$(".header1 .login").hide();
+			$(".loginH").show();
+			var yssyxt_jifen = $.cookie('yssyxt_jifen');
+			console.log("积分测试cookie：" + $.cookie('yssyxt_jifen'));
+			$("#Integral").text("积分"+yssyxt_jifen);
+		}
+		// 退出登录
+		$("#Quit").click(function(){
+			$(".header1 .login").show();
+			$(".loginH").hide();
+			$.cookie('yssyxt_login_status', null);
+			$.cookie('yssyxt_jifen', null);
+			location.reload();
+		})
+	})
     var swiper = new Swiper('.swiper-container', {
       speed: 600,
       parallax: true,
