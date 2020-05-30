@@ -258,7 +258,7 @@
 	$(function() {
 		// 判断是否登录
 		var yssyxt_login_status = $.cookie('yssyxt_login_status');
-		if (yssyxt_login_status == null || yssyxt_login_status == '' || typeof(yssyxt_login_status) === 'undefined') {
+		if (yssyxt_login_status  != '1') {
 			$(".header1 .login").show();
 			$(".loginH").hide();
 		} else {

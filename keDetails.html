@@ -241,7 +241,7 @@
 	$(function() {
 		// 判断是否登录
 		var yssyxt_login_status = $.cookie('yssyxt_login_status');
-		if (yssyxt_login_status == null || yssyxt_login_status == '' || typeof(yssyxt_login_status) === 'undefined') {
+		if (yssyxt_login_status != '1') {
 			$(".header1 .login").show();
 			$(".loginH").hide();
 		} else {
@@ -274,7 +274,7 @@
 	// 购买
 	function buy() {
 		var yssyxt_login_status = $.cookie('yssyxt_login_status');
-		if (yssyxt_login_status == null || yssyxt_login_status == '' || typeof(yssyxt_login_status) === 'undefined') {
+		if (yssyxt_login_status != '1') {
 			alert("您还未登录，请先登录！");
 			return false;
 		}
@@ -290,6 +290,11 @@
 	}
 	// 发表评论
 	function comeOut() {
+		var yssyxt_login_status = $.cookie('yssyxt_login_status');
+		if (yssyxt_login_status != '1') {
+			alert("您还未登录，请先登录！");
+			return false;
+		}
 		var grade = $('input[name="grade"]:checked').val();
 		var pjConten = $('#pjConten').val();
 		if (grade == "" || typeof(grade)==="undefined") {

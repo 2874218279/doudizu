@@ -371,15 +371,13 @@
 	$(function() {
 		// 判断是否登录
 		var yssyxt_login_status = $.cookie('yssyxt_login_status');
-		console.log("状态测试cookie：" + $.cookie('yssyxt_login_status'));
-		if (yssyxt_login_status == '' || typeof(yssyxt_login_status) === 'undefined') {
+		if (yssyxt_login_status  != '1') {
 			$(".header1 .login").show();
 			$(".loginH").hide();
 		} else {
 			$(".header1 .login").hide();
 			$(".loginH").show();
 			var yssyxt_jifen = $.cookie('yssyxt_jifen');
-			console.log("积分测试cookie：" + $.cookie('yssyxt_jifen'));
 			$("#Integral").text("积分"+yssyxt_jifen);
 		}
 		// 退出登录
