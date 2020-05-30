@@ -91,7 +91,7 @@ document.writeln("              <!-- 图标结束 --> ");
 document.writeln("            </li>");
 document.writeln("          </ul>");
 document.writeln("        </nav>");
-document.writeln("        <div class=\'RightB\'><a class=\'seach\'><img src=\'images/search_03.png\' alt=\'永胜学院\'></a>");
+document.writeln("        <div class=\'RightB\'><a class=\'seach\' href=\'search_result.html\'><img src=\'images/search_03.png\' alt=\'永胜学院\'></a>");
 document.writeln("          <div class=\'login\'><a href=\'login.html\' class=\'dl\'>登录</a><a href=\'zc.html\' class=\'zc\'>注册</a></div>");
 document.writeln("          <div class=\'loginH\'><p>您好，测试用户<a href=\'buy.html\' id=\'Integral\'>积分0</a><a id=\'Quit\'>退出</a></p></div>");
 document.writeln("        </div>");
@@ -139,23 +139,23 @@ document.writeln("  <div class=\'search-bg\'></div>");
 document.writeln("  <!--MO导航结束--> ");
 document.writeln("  <!--SEARCH 弹出层-->");
 document.writeln("  <div class=\'c-mask-overlay\'></div>");
-document.writeln("  <div class=\'search-alert\'> <span class=\'close iconfont icon-close\'></span>");
+/* document.writeln("  <div class=\'search-alert\'> <span class=\'close iconfont icon-close\'></span>");
 document.writeln("    <div class=\'cent-form iconfont icon-search1\'>");
 document.writeln("      <form action=\'search_result.html\' method=\'GET\' id=\'pro-ser-frm\'>");
 document.writeln("        <input class=\'fl tex\' type=\'text\' id=\'news_search_word\' name=\'keyword\' value=\'\' placeholder=\'请输入搜索内容\' onblur=\'if(!value){value=defaultValue;}\' onfocus=\'if(value==defaultValue){value=\'\';}\'>");
 document.writeln("        <input class=\'fr sub-butn\' type=\'submit\' id=\'lv_search\' value=\'ENTER\'>");
 document.writeln("      </form>");
 document.writeln("    </div>");
-document.writeln("  </div>");
+document.writeln("  </div>"); */
 document.writeln("  <!--SEARCH 弹出层结束--> ");
 document.writeln("</div>");
 
-$(".seach").click(function(){
+/*$(".seach").click(function(){
   $(".search-alert").css("display","block");
 });
 $(".search-alert .close").click(function(){
   $(".search-alert").css("display","none");
-});
+});*/
 
 
 

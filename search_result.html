@@ -12,31 +12,220 @@
 </head>
 <body>
 <script type="text/javascript" src="js/header.js"></script>
-<div class="serchJg">
-	<h3>搜索结果</h3>
-	<div class="serchtit">
-		<div>
-			<div>标题</div>
-			<div>类型</div>
-			<div>发布时间</div>
-		</div>
-	
-	</div>
+<div align="center" style="margin-top:120px;margin-bottom:30px;">
+	<input type="text" id="search_txt" placeholder="请输入关键字" style="height:40px;width:350px;border:1px solid #bbb6b6;padding:5px;border-radius:3px;"/>
+	<input type="button" id="search_btn" value="搜 索" onclick="search(0)" style="height:40px;width:70px;background:#337ab7;border:none;border-radius:3px;font-size:16px;color:white;margin-left:5px;"/>
+	<input type="button" id="search_btn" value="重 置" onclick="search(1)" style="height:40px;width:70px;border:1px solid #337ab7;border-radius:3px;font-size:16px;background:white;color:#337ab7;margin-left:5px;"/>
+</div>
+<div class="js-select-course select-course mod-sub" data-mod="select-courses.精选公开课.3" data-name="精选公开课" data-report-module="精选公开课" data-order="3" style="margin-bottom:0px;">
+  <div class="container-1200 container container-md container-sm">
+    <div class="hover-expand">
+      <div class="container-1200">
+        <div class="select-course-bd">
+          <div class="course-wrap js-course-list">
+            <ul class="course-card-list" auto-test="" id="dataTables">
+              <li class="course-card-item--v3 js-course-card-item " data-report-position="10"> 
+			  <input type="hidden" class="hidden_txt" value="Java架构师培训课程  分布式/高可用/微服务">
+			  <a href="keDetails.html" target="_blank" class="item-img-link "> 
+				<img src="images/356.jpg" alt="Java架构师培训课程  分布式/高可用/微服务/spring【鲁班学院】" title="Java架构师培训课程  分布式/高可用/微服务/spring【鲁班学院】" class="item-img" width="220" height="124">
+                <div class="item-status"> </div>
+              </a>
+              <h4 class="item-tt "> 
+			  <a href="keDetails.html" target="_blank" class="item-tt-link" title="Java架构师培训课程  分布式/高可用/微服务/spring【鲁班学院】" cors-name="course">Java架构师培训课程  分布式/高可用/微服务</a> 
+			  </h4>
+              <div class="item-line item-line--middle"> <span class="line-cell item-task">进度：3/44节</span> </div>
+              <div class="item-line item-line--bottom"> <span class="line-cell item-price ">免费</span> <span class="line-cell item-user "> 2727人最近报名 </span> </div>
+              </li>
+              <li class="course-card-item--v3 js-course-card-item " data-report-position="10"> 
+			  <input type="hidden" class="hidden_txt" value="Java架构师系统提升课程">
+			  <a href="keDetails.html" target="_blank" class="item-img-link "> <img src="images/357.jpg" alt="Java架构师培训课程  分布式/高可用/微服务/spring【鲁班学院】" title="Java架构师培训课程  分布式/高可用/微服务/spring【鲁班学院】" class="item-img" width="220" height="124">
+                <div class="item-status"> </div>
+                </a>
+                <h4 class="item-tt "> <a href="keDetails.html" target="_blank" class="item-tt-link" title="Java架构师培训课程  分布式/高可用/微服务/spring【鲁班学院】" cors-name="course">Java架构师系统提升课程</a> </h4>
+                <div class="item-line item-line--middle"> <span class="line-cell item-task">共31节</span> </div>
+                <div class="item-line item-line--bottom"> <span class="line-cell item-price ">免费</span> <span class="line-cell item-user "> 26人最近报名 </span> </div>
+              </li>
+              <li class="course-card-item--v3 js-course-card-item " data-report-position="10"> 
+			  <input type="hidden" class="hidden_txt" value="PHP7进阶到架构">
+			  <a href="keDetails.html" target="_blank" class="item-img-link "> <img src="images/358.jpg" alt="PHP7进阶到架构" title="PHP7进阶到架构" class="item-img" width="220" height="124">
+                <div class="item-status"> </div>
+                </a>
+                <h4 class="item-tt "> <a href="keDetails.html" target="_blank" class="item-tt-link" title="PHP7进阶到架构" cors-name="course">PHP7进阶到架构</a> </h4>
+                <div class="item-line item-line--middle"> <span class="line-cell item-task">进度：3/44节</span> </div>
+                <div class="item-line item-line--bottom"> <span class="line-cell item-price ">免费</span> <span class="line-cell item-user "> 272人最近报名 </span> </div>
+              </li>
+              <li class="course-card-item--v3 js-course-card-item " data-report-position="10"> 
+			  <input type="hidden" class="hidden_txt" value="Java零基础入门到精通-上">
+			  <a href="keDetails.html" target="_blank" class="item-img-link "> <img src="images/359.jpg" alt="Java零基础入门到精通-上" title="Java零基础入门到精通-上" class="item-img" width="220" height="124">
+                <div class="item-status"> </div>
+                </a>
+                <h4 class="item-tt "> <a href="keDetails.html" target="_blank" class="item-tt-link" title="Java零基础入门到精通-上" cors-name="course">Java零基础入门到精通-上</a> </h4>
+                <div class="item-line item-line--middle"> <span class="line-cell item-task">进度：3/44节</span> </div>
+                <div class="item-line item-line--bottom"> <span class="line-cell item-price ">免费</span> <span class="line-cell item-user "> 273人最近报名 </span> </div>
+              </li>
+              <li class="course-card-item--v3 js-course-card-item " data-report-position="10"> 
+			   <input type="hidden" class="hidden_txt" value="JAVA架构师严选课 企业级架构/分布式/高并发/微服务">
+			  <a href="keDetails.html" target="_blank" class="item-img-link "> <img src="images/360.jpg" alt="JAVA架构师严选课 企业级架构/分布式/高并发/微服务" title="JAVA架构师严选课 企业级架构/分布式/高并发/微服务" class="item-img" width="220" height="124">
+                <div class="item-status"> </div>
+                </a>
+                <h4 class="item-tt "> <a href="keDetails.html" target="_blank" class="item-tt-link" title="JAVA架构师严选课 企业级架构/分布式/高并发/微服务" cors-name="course">JAVA架构师严选课 企业级架构/分布式/高并发/微服务</a> </h4>
+                <div class="item-line item-line--middle"> <span class="line-cell item-task">进度：3/44节</span> </div>
+                <div class="item-line item-line--bottom"> <span class="line-cell item-price ">免费</span> <span class="line-cell item-user "> 2727人最近报名 </span> </div>
+              </li>
+              <li class="course-card-item--v3 js-course-card-item " data-report-position="10">
+				<input type="hidden" class="hidden_txt" value="JAVA高级开发 架构师课程（高并发 高可用 高扩展）">
+			  <a href="keDetails.html" target="_blank" class="item-img-link "> <img src="images/361.png" alt="JAVA高级开发 架构师课程（高并发 高可用 高扩展）" title="JAVA高级开发 架构师课程（高并发 高可用 高扩展）" class="item-img" width="220" height="124">
+                <div class="item-status"> </div>
+                </a>
+                <h4 class="item-tt "> <a href="keDetails.html" target="_blank" class="item-tt-link" title="JAVA高级开发 架构师课程（高并发 高可用 高扩展）" cors-name="course">JAVA高级开发 架构师课程（高并发 高可用 高扩展）</a> </h4>
+                <div class="item-line item-line--middle"> <span class="line-cell item-task">进度：3/44节</span> </div>
+                <div class="item-line item-line--bottom"> <span class="line-cell item-price ">免费</span> <span class="line-cell item-user "> 2727人最近报名 </span> </div>
+              </li>
+              <li class="course-card-item--v3 js-course-card-item " data-report-position="10"> 
+			  <input type="hidden" class="hidden_txt" value="NET/C#架构师/高级开发/Core/微服务/分布式/高并发【软谋教育】">
+			  <a href="keDetails.html" target="_blank" class="item-img-link "> <img src="images/362.jpg" alt="NET/C#架构师/高级开发/Core/微服务/分布式/高并发【软谋教育】" title="NET/C#架构师/高级开发/Core/微服务/分布式/高并发【软谋教育】" class="item-img" width="220" height="124">
+                <div class="item-status"> </div>
+                </a>
+                <h4 class="item-tt "> <a href="keDetails.html" target="_blank" class="item-tt-link" title="NET/C#架构师/高级开发/Core/微服务/分布式/高并发【软谋教育】" cors-name="course">NET/C#架构师/高级开发/Core/微服务/分布式/高并发【软谋教育】</a> </h4>
+                <div class="item-line item-line--middle"> <span class="line-cell item-task">进度：3/44节</span> </div>
+                <div class="item-line item-line--bottom"> <span class="line-cell item-price ">免费</span> <span class="line-cell item-user "> 2727人最近报名 </span> </div>
+              </li>
+              <li class="course-card-item--v3 js-course-card-item " data-report-position="10"> 
+			   <input type="hidden" class="hidden_txt" value="C#/.NET全栈/Core/BS/CS/上位机/WPF/WCF/MVC/分布式">
+			  <a href="keDetails.html" target="_blank" class="item-img-link "> <img src="images/363.jpg" alt="C#/.NET全栈/Core/BS/CS/上位机/WPF/WCF/MVC/分布式" title="C#/.NET全栈/Core/BS/CS/上位机/WPF/WCF/MVC/分布式" class="item-img" width="220" height="124">
+                <div class="item-status"> </div>
+                </a>
+                <h4 class="item-tt "> <a href="keDetails.html" target="_blank" class="item-tt-link" title="C#/.NET全栈/Core/BS/CS/上位机/WPF/WCF/MVC/分布式" cors-name="course">C#/.NET全栈/Core/BS/CS/上位机/WPF/WCF/MVC/分布式</a> </h4>
+                <div class="item-line item-line--middle"> <span class="line-cell item-task">44节</span> </div>
+                <div class="item-line item-line--bottom"> <span class="line-cell item-price ">免费</span> <span class="line-cell item-user "> 2727人最近报名 </span> </div>
+              </li>
+              <li class="course-card-item--v3 js-course-card-item " data-report-position="10"> 
+			  <input type="hidden" class="hidden_txt" value="C/C++Linux服务器开发/后台架构师">
+			  <a href="keDetails.html" target="_blank" class="item-img-link "> <img src="images/364.jpg" alt="C/C++Linux服务器开发/后台架构师" title="C/C++Linux服务器开发/后台架构师" class="item-img" width="220" height="124">
+                <div class="item-status"> </div>
+                </a>
+                <h4 class="item-tt "> <a href="keDetails.html" target="_blank" class="item-tt-link" title="C/C++Linux服务器开发/后台架构师" cors-name="course">C/C++Linux服务器开发/后台架构师</a> </h4>
+                <div class="item-line item-line--middle"> <span class="line-cell item-task">进度：3/44节</span> </div>
+                <div class="item-line item-line--bottom"> <span class="line-cell item-price ">免费</span> <span class="line-cell item-user "> 2727人最近报名 </span> </div>
+              </li>
+              <li class="course-card-item--v3 js-course-card-item " data-report-position="10"> 
+			  <input type="hidden" class="hidden_txt" value="Node.js-Koa2框架生态实战－从零模拟新浪微博">
+			  <a href="keDetails.html" target="_blank" class="item-img-link "> <img src="images/365.jpg" alt="Java架构师培训课程分布式/高可用/微服务/" title="Java架构师培训课程分布式/高可用/微服务/" class="item-img" width="220" height="124">
+                <div class="item-status"> </div>
+                </a>
+                <h4 class="item-tt "> <a href="keDetails.html" target="_blank" class="item-tt-link" title="Java架构师培训课程分布式/高可用/微服务/" cors-name="course">Node.js-Koa2框架生态实战－从零模拟新浪微博</a> </h4>
+                <div class="item-line item-line--middle"> <span class="line-cell item-task">进度：3/44节</span> </div>
+                <div class="item-line item-line--bottom"> <span class="line-cell item-price ">免费</span> <span class="line-cell item-user "> 2727人最近报名 </span> </div>
+              </li>
+              <li class="course-card-item--v3 js-course-card-item " data-report-position="10"> 
+			   <input type="hidden" class="hidden_txt" value="Javascript 设计模式系统讲解与应用">
+			  <a href="keDetails.html" target="_blank" class="item-img-link "> <img src="images/410.jpg" alt="Java架构师培训课程  分布式/高可用/微服务/spring【鲁班学院】" title="Java架构师培训课程  分布式/高可用/微服务/spring【鲁班学院】" class="item-img" width="220" height="124">
+                <div class="item-status"> </div>
+                </a>
+                <h4 class="item-tt "> <a href="keDetails.html" target="_blank" class="item-tt-link" title="Java架构师培训课程  分布式/高可用/微服务/spring【鲁班学院】" cors-name="course">Javascript 设计模式系统讲解与应用</a> </h4>
+                <div class="item-line item-line--middle"> <span class="line-cell item-task">进度：3/44节</span> </div>
+                <div class="item-line item-line--bottom"> <span class="line-cell item-price ">免费</span> <span class="line-cell item-user "> 2727人最近报名 </span> </div>
+              </li>
+              <li class="course-card-item--v3 js-course-card-item " data-report-position="10"> 
+			  <input type="hidden" class="hidden_txt" value="Electron+React+七牛云 实战跨平台桌面应用">
+			  <a href="keDetails.html" target="_blank" class="item-img-link "> <img src="images/411.jpg" alt="Java架构师培训课程  分布式/高可用/微服务/spring【鲁班学院】" title="Java架构师培训课程  分布式/高可用/微服务/spring【鲁班学院】" class="item-img" width="220" height="124">
+                <div class="item-status"> </div>
+                </a>
+                <h4 class="item-tt "> <a href="keDetails.html" target="_blank" class="item-tt-link" title="Java架构师培训课程  分布式/高可用/微服务/spring【鲁班学院】" cors-name="course">Electron+React+七牛云 实战跨平台桌面应用</a> </h4>
+                <div class="item-line item-line--middle"> <span class="line-cell item-task">进度：3/44节</span> </div>
+                <div class="item-line item-line--bottom"> <span class="line-cell item-price ">免费</span> <span class="line-cell item-user "> 2727人最近报名 </span> </div>
+              </li>
+              <li class="course-card-item--v3 js-course-card-item " data-report-position="10"> 
+			  <input type="hidden" class="hidden_txt" value="Python基础到高级实战">
+			  <a href="keDetails.html" target="_blank" class="item-img-link "> <img src="images/412.png" alt="Python基础到高级实战" title="Python基础到高级实战" class="item-img" width="220" height="124">
+                <div class="item-status"> </div>
+                </a>
+                <h4 class="item-tt "> <a href="keDetails.html" target="_blank" class="item-tt-link" title="Python基础到高级实战" cors-name="course">Python基础到高级实战</a> </h4>
+                <div class="item-line item-line--middle"> <span class="line-cell item-task">进度：3/44节</span> </div>
+                <div class="item-line item-line--bottom"> <span class="line-cell item-price ">免费</span> <span class="line-cell item-user "> 2727人最近报名 </span> </div>
+              </li>
+              <li class="course-card-item--v3 js-course-card-item " data-report-position="10"> 
+			   <input type="hidden" class="hidden_txt" value="web全栈开发班级">
+			  <a href="keDetails.html" target="_blank" class="item-img-link "> <img src="images/413.jpg" alt="web全栈开发班级" title="web全栈开发班级" class="item-img" width="220" height="124">
+                <div class="item-status"> </div>
+                </a>
+                <h4 class="item-tt "> <a href="keDetails.html" target="_blank" class="item-tt-link" title="web全栈开发班级" cors-name="course">web全栈开发班级</a> </h4>
+                <div class="item-line item-line--middle"> <span class="line-cell item-task">进度：3/44节</span> </div>
+                <div class="item-line item-line--bottom"> <span class="line-cell item-price ">免费</span> <span class="line-cell item-user "> 2727人最近报名 </span> </div>
+              </li>
+              <li class="course-card-item--v3 js-course-card-item " data-report-position="10"> 
+			  <input type="hidden" class="hidden_txt" value="Hadoop3基础与电商行为日志分析">
+			  <a href="keDetails.html" target="_blank" class="item-img-link "> <img src="images/356.jpg" alt="Java架构师培训课程  分布式/高可用/微服务/spring【鲁班学院】" title="Java架构师培训课程  分布式/高可用/微服务/spring【鲁班学院】" class="item-img" width="220" height="124">
+                <div class="item-status"> </div>
+                </a>
+                <h4 class="item-tt "> <a href="keDetails.html" target="_blank" class="item-tt-link" title="Java架构师培训课程  分布式/高可用/微服务/spring【鲁班学院】" cors-name="course">Hadoop3基础与电商行为日志分析</a> </h4>
+                <div class="item-line item-line--middle"> <span class="line-cell item-task">进度：3/44节</span> </div>
+                <div class="item-line item-line--bottom"> <span class="line-cell item-price ">免费</span> <span class="line-cell item-user "> 2727人最近报名 </span> </div>
+              </li>
+              <li class="course-card-item--v3 js-course-card-item " data-report-position="10"> 
+			  <input type="hidden" class="hidden_txt" value="微信小程序云开发－从0打造云音乐全栈小程序">
+			  <a href="keDetails.html" target="_blank" class="item-img-link "> <img src="images/356.jpg" alt="Java架构师培训课程  分布式/高可用/微服务/spring【鲁班学院】" title="Java架构师培训课程  分布式/高可用/微服务/spring【鲁班学院】" class="item-img" width="220" height="124">
+                <div class="item-status"> </div>
+                </a>
+                <h4 class="item-tt "> <a href="keDetails.html" target="_blank" class="item-tt-link" title="Java架构师培训课程  分布式/高可用/微服务/spring【鲁班学院】" cors-name="course">微信小程序云开发－从0打造云音乐全栈小程序</a> </h4>
+                <div class="item-line item-line--middle"> <span class="line-cell item-task">进度：3/44节</span> </div>
+                <div class="item-line item-line--bottom"> <span class="line-cell item-price ">免费</span> <span class="line-cell item-user "> 2727人最近报名 </span> </div>
+              </li>
+              <li class="course-card-item--v3 js-course-card-item " data-report-position="10"> 
+			  <input type="hidden" class="hidden_txt" value="学习Hyperledger Fabric实战联盟链">
+			  <a href="keDetails.html" target="_blank" class="item-img-link "> <img src="images/356.jpg" alt="Java架构师培训课程  分布式/高可用/微服务/spring【鲁班学院】" title="Java架构师培训课程  分布式/高可用/微服务/spring【鲁班学院】" class="item-img" width="220" height="124">
+                <div class="item-status"> </div>
+                </a>
+                <h4 class="item-tt "> <a href="keDetails.html" target="_blank" class="item-tt-link" title="Java架构师培训课程  分布式/高可用/微服务/spring【鲁班学院】" cors-name="course">学习Hyperledger Fabric实战联盟链</a> </h4>
+                <div class="item-line item-line--middle"> <span class="line-cell item-task">进度：3/44节</span> </div>
+                <div class="item-line item-line--bottom"> <span class="line-cell item-price ">免费</span> <span class="line-cell item-user "> 2727人最近报名 </span> </div>
+              </li>
+              <li class="course-card-item--v3 js-course-card-item " data-report-position="10"> 
+			  <input type="hidden" class="hidden_txt" value="Python操作三大主流数据库">
+			  <a href="keDetails.html" target="_blank" class="item-img-link "> <img src="images/356.jpg" alt="Java架构师培训课程  分布式/高可用/微服务/spring【鲁班学院】" title="Java架构师培训课程  分布式/高可用/微服务/spring【鲁班学院】" class="item-img" width="220" height="124">
+                <div class="item-status"> </div>
+                </a>
+                <h4 class="item-tt "> <a href="keDetails.html" target="_blank" class="item-tt-link" title="Java架构师培训课程  分布式/高可用/微服务/spring【鲁班学院】" cors-name="course">Python操作三大主流数据库</a> </h4>
+                <div class="item-line item-line--middle"> <span class="line-cell item-task">进度：3/44节</span> </div>
+                <div class="item-line item-line--bottom"> <span class="line-cell item-price ">免费</span> <span class="line-cell item-user "> 2727人最近报名 </span> </div>
+              </li>
+              <li class="course-card-item--v3 js-course-card-item " data-report-position="10"> 
+			  <input type="hidden" class="hidden_txt" value="MySQL数据库集群-PXC方案">
+			  <a href="keDetails.html" target="_blank" class="item-img-link "> <img src="images/356.jpg" alt="Java架构师培训课程  分布式/高可用/微服务/spring【鲁班学院】" title="Java架构师培训课程  分布式/高可用/微服务/spring【鲁班学院】" class="item-img" width="220" height="124">
+                <div class="item-status"> </div>
+                </a>
+                <h4 class="item-tt "> <a href="keDetails.html" target="_blank" class="item-tt-link" title="Java架构师培训课程  分布式/高可用/微服务/spring【鲁班学院】" cors-name="course">MySQL数据库集群-PXC方案</a> </h4>
+                <div class="item-line item-line--middle"> <span class="line-cell item-task">进度：3/44节</span> </div>
+                <div class="item-line item-line--bottom"> <span class="line-cell item-price ">免费</span> <span class="line-cell item-user "> 2727人最近报名 </span> </div>
+              </li>
+              <li class="course-card-item--v3 js-course-card-item " data-report-position="10"> 
+			  <input type="hidden" class="hidden_txt" value="Java企业级支付全家桶设计与实战">
+			  <a href="keDetails.html" target="_blank" class="item-img-link "> <img src="images/356.jpg" alt="Java架构师培训课程  分布式/高可用/微服务/spring【鲁班学院】" title="Java架构师培训课程  分布式/高可用/微服务/spring【鲁班学院】" class="item-img" width="220" height="124">
+                <div class="item-status"> </div>
+                </a>
+                <h4 class="item-tt "> <a href="keDetails.html" target="_blank" class="item-tt-link" title="Java架构师培训课程  分布式/高可用/微服务/spring【鲁班学院】" cors-name="course">Java企业级支付全家桶设计与实战</a> </h4>
+                <div class="item-line item-line--middle"> <span class="line-cell item-task">进度：3/44节</span> </div>
+                <div class="item-line item-line--bottom"> <span class="line-cell item-price ">免费</span> <span class="line-cell item-user "> 2727人最近报名 </span> </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <a class="js-paging-btn btn btn-prev disabled" title="上一页" href="javascript:void(0)" data-paging="-1"> <i class="icon-font i-v-left"></i> </a> <a class="js-paging-btn btn btn-next" title="下一页" href="javascript:void(0)" data-paging="1"> <i class="icon-font i-v-right"></i> </a> </div>
+  </div>
 </div>
 <script type="text/javascript" src="js/jquery-cookie/jquery.cookie.js"></script>
 <script>
 	$(function() {
 		// 判断是否登录
 		var yssyxt_login_status = $.cookie('yssyxt_login_status');
-		console.log("状态测试cookie：" + $.cookie('yssyxt_login_status'));
-		if (yssyxt_login_status == '' || typeof(yssyxt_login_status) === 'undefined') {
+		if (yssyxt_login_status == null || yssyxt_login_status == '' || typeof(yssyxt_login_status) === 'undefined') {
 			$(".header1 .login").show();
 			$(".loginH").hide();
 		} else {
 			$(".header1 .login").hide();
 			$(".loginH").show();
 			var yssyxt_jifen = $.cookie('yssyxt_jifen');
-			console.log("积分测试cookie：" + $.cookie('yssyxt_jifen'));
 			$("#Integral").text("积分"+yssyxt_jifen);
 		}
 		// 退出登录
@@ -48,6 +237,22 @@
 			location.reload();
 		})
 	})
+	// 查询 
+	function search(type){
+		if (type == 0) {
+			$("#dataTables li").css("display","");
+			var input = $("#search_txt").val().trim();
+			for (var i = 0; i < $("#dataTables li").length; i++) {
+				var name = $("#dataTables li").eq(i).children('.hidden_txt').val();
+				if (name.indexOf(input) == -1) {
+					$(".course-card-list li").eq(i).css("display","none");
+				}
+			}
+		 } else {
+			 $(".course-card-list li").css("display","");
+			 $("#search_txt").val("");
+		 }
+	}
   </script>
 </body>
 </html>

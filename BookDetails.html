@@ -33,16 +33,15 @@
                 </p>
                 <i class=""></i>
          </div>
-		  <a id="KcIntegral" style="margin-bottom: -15px;">积分<span>2</span></a>
+		  <a id="KcIntegral" style="color:#1166ab;margin-bottom:-15px;">购买所需积分：<span>2</span></a>
          <div class="oper-bar" id="js_btn_bar" auto-test="mod_oper_bar">      
 			<a href="" class="im-btn general-btn-main institution-btn-main btn-default btn-l"><span class="general-btn-tip institution-btn-tip"></span><span class="general-btn-txt institution-btn-txt" onclick="buy()">立即购买</span></a>       
-            <a class="btn-outline btn-contact-notel js-contact-btn" style="" data-position="video" onclick="$('#pjConten').focus();">
+            <!--<a class="btn-outline btn-contact-notel js-contact-btn" style="" data-position="video" onclick="$('#pjConten').focus();">
                 <span class="btn-advice-tel">
                     <i class="item-icon icon-font i-comment js-icon-msg" style=""></i>
                     <i class="item-icon icon-font i-qq js-icon-qidian" style="display:none"></i>评价
                 </span>
-             </a>
-        
+             </a>-->
         </div>
        </div>
     </div>
@@ -247,15 +246,13 @@
 	$(function() {
 		// 判断是否登录
 		var yssyxt_login_status = $.cookie('yssyxt_login_status');
-		console.log("状态测试cookie：" + $.cookie('yssyxt_login_status'));
-		if (yssyxt_login_status == '' || typeof(yssyxt_login_status) === 'undefined') {
+		if (yssyxt_login_status == null || yssyxt_login_status == '' || typeof(yssyxt_login_status) === 'undefined') {
 			$(".header1 .login").show();
 			$(".loginH").hide();
 		} else {
 			$(".header1 .login").hide();
 			$(".loginH").show();
 			var yssyxt_jifen = $.cookie('yssyxt_jifen');
-			console.log("积分测试cookie：" + $.cookie('yssyxt_jifen'));
 			$("#Integral").text("积分"+yssyxt_jifen);
 		}
 		// 退出登录
@@ -282,7 +279,7 @@
 	// 购买
 	function buy() {
 		var yssyxt_login_status = $.cookie('yssyxt_login_status');
-		if (yssyxt_login_status == '' || typeof(yssyxt_login_status) === 'undefined') {
+		if (yssyxt_login_status == null || yssyxt_login_status == '' || typeof(yssyxt_login_status) === 'undefined') {
 			alert("您还未登录，请先登录！");
 			return false;
 		}
@@ -291,9 +288,9 @@
 			alert("您当前积分不足，请先进行购买！");
 			return false;
 		} else {
+			alert("恭喜您购买成功");
 			$.cookie('yssyxt_jifen', parseInt(yssyxt_jifen) - 2);
 			$("#Integral").text("积分"+parseInt(yssyxt_jifen) - 2);
-			alert("恭喜您购买成功");
 		}
 	}
 	// 发表评论

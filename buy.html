@@ -16,12 +16,14 @@
 <div class="Buywap">
     <div class="Buy">
 		<div class="purchase-price--rows">
-			<div style="margin-bottom:15px;margin-left: 13px;">当前拥有积分：
+			<h2 style="margin-bottom:40px;margin-left:70px;">我的账户</h2>
+			<div style="margin-bottom:15px;">
+				<b style="font-size:15px;">当前所拥有积分：</b>
 				<span id="nowJiFen" style="margin-left: 5px;font-size: 18px;font-weight: bold;color: orange;">0</span>
 			</div>
-			<p class="purchase-price--label">请输入购买分额：</p>
-			<input type="text" id="shoppTotal" value="" style="border: 1px solid #aba9a9;border-radius: 3px;height: 34px;padding: 5px;" placeholder="请输入整数"/>
-			<input type="button" id="submit"  value="购买" class="BuyT" onclick="shoppingSubmit()"/>
+			<p class="purchase-price--label" style="font-weight:bold;font-size:15px;">请输入购买分额：</p>
+			<input type="text" id="shoppTotal" value="" style="border:1px solid #a09797;border-radius:3px;height:40px;padding:5px;width:100px;margin-left:10px;" placeholder="请输入整数"/>
+			<input type="button" id="submit" value="购买" class="BuyT" onclick="shoppingSubmit()"/>
 		</div>
     </div>
 </div>
@@ -57,15 +59,13 @@
 	$(function() {
 		// 判断是否登录
 		var yssyxt_login_status = $.cookie('yssyxt_login_status');
-		console.log("状态测试cookie：" + $.cookie('yssyxt_login_status'));
-		if (yssyxt_login_status == '' || typeof(yssyxt_login_status) === 'undefined') {
+		if (yssyxt_login_status == null || yssyxt_login_status == '' || typeof(yssyxt_login_status) === 'undefined') {
 			$(".header1 .login").show();
 			$(".loginH").hide();
 		} else {
 			$(".header1 .login").hide();
 			$(".loginH").show();
 			var yssyxt_jifen = $.cookie('yssyxt_jifen');
-			console.log("积分测试cookie：" + $.cookie('yssyxt_jifen'));
 			$("#Integral").text("积分"+yssyxt_jifen);
 			$("#nowJiFen").text(yssyxt_jifen);
 		}
@@ -90,10 +90,10 @@
 　　　　	alert("只能输入整数！");  
 	　　　　return false;
 	　　}
+		alert("恭喜您购买成功！");  
 		var yssyxt_jifen = $.cookie('yssyxt_jifen');
 		$.cookie('yssyxt_jifen', parseInt(yssyxt_jifen) + parseInt(shoppTotal));
 		$("#Integral").text("积分"+parseInt(yssyxt_jifen) + parseInt(shoppTotal));
-		alert("恭喜您购买成功！");  
         history.go(-1);
 	}
   </script>
