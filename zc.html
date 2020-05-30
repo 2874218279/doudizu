@@ -83,10 +83,17 @@ body {
 <script type="text/javascript" src="js/jquery-cookie/jquery.cookie.js"></script>
 <script>
 	function beforeSubmit(form) {
-		if (form.Email.value.length<6){
-			alert('邮箱不能为空，请输入正确邮箱格式！');
+		var email = form.Email.value;
+		var reg = /^([a-zA-Z]|[0-9])(\w|\-)+@[a-zA-Z0-9]+\.([a-zA-Z]{2,4})$/;
+		if (email==''){
+			alert('邮箱不能为空！');
 			form.Email.focus();
 			return false;
+		} else {
+			if(!reg.test(email)){
+				alert("邮箱格式不正确！");
+				return false;
+			}
 		}
 		if (form.Name.value==''){
 			alert('姓名不能为空！');
