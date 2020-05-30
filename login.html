@@ -112,7 +112,7 @@ body {
 		alert("恭喜您登录成功，获得了2个积分！");
 		$.cookie('yssyxt_login_status', '1');
 		var yssyxt_jifen = $.cookie('yssyxt_jifen');
-		if (yssyxt_login_status == null || yssyxt_jifen == '' || typeof(yssyxt_jifen) === 'undefined') {
+		if (yssyxt_jifen == 'null' || yssyxt_jifen == '' || typeof(yssyxt_jifen) === 'undefined') {
 			$.cookie('yssyxt_jifen', '2');
 		} else {
 			$.cookie('yssyxt_jifen', '7');
