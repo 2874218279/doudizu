@@ -20,14 +20,14 @@
   <div class="container-1200 container">
 	<div class="row">
     	<div class="col-md-7">
-            <video controls src="video/生物学1.mp4" width="100%">
-            </video>
+            <video id="videoURL" controls src="video/UI设计试看.mp4" width="100%"></video>
+			<div id="videoMSG" style="color:#fb580b;font-size:16px;font-weight:bold;">注：您还未购买此视频，当前为试看，试看2分钟！</div>
         </div>
        <div class="col-md-5">
-       <h1 class="page-tt"><span class="premium-tag-react"></span><span class="title-main">JVM虚拟机底层原理分析与性能优化5.27-         助理微信：18932447130</span></h1>
-       <p class="gy"><span>534人 购买</span><span>好评度 -</span></p>
+       <h1 class="page-tt"><span class="premium-tag-react"></span><span class="title-main">[UI设计必学]APP内容页排版技法XD教程</span></h1>
+       <p class="gy"><span>534人 购买</span>&nbsp;&nbsp;&nbsp;<span>好评度 90%</span></p>
        <div class="class-content js-term-item js-term-baseinfo class-content--no-des active" data-idx="0" data-termid="102662237">
-                <h2 class="hidden-clip">jvm虚拟机5.27</h2>
+                <h2 class="hidden-clip">UI设计5.27</h2>
                 <p class="class-date">
                   上课时间：05月27日 至 25年05月
                 </p>
@@ -35,7 +35,8 @@
          </div>
          <a id="KcIntegral" style="color:#1166ab;">购买所需积分：<span>2</span></a>
          <div class="oper-bar" id="js_btn_bar" auto-test="mod_oper_bar">
-           <a href="" class="im-btn general-btn-main institution-btn-main btn-default btn-l" id="lijiShopp_a"><span class="general-btn-tip institution-btn-tip"></span><span class="general-btn-txt institution-btn-txt" onclick="buy()" id="lijiShopp_span">立即购买</span></a>            
+			<div id="success_msg" style="color: green;font-weight: bold;font-size: 17px;display:none;">购买成功！</div>
+			<input id="lijiShopp_btn" class="btn btn btn-primary" type="button" onclick="buy()" value="立即购买" style="width:150px;height:45px;font-size:18px;" />
             <!--<a class="btn-outline btn-contact-notel js-contact-btn" style="" data-position="video" onclick="$('#pjConten').focus();">
                 <span class="btn-advice-tel">
                     <i class="item-icon icon-font i-comment js-icon-msg" style=""></i>
@@ -282,11 +283,14 @@
 			alert("您当前积分不足，请先进行购买积分！");
 			return false;
 		} else {
-			alert("恭喜您购买成功");
+			$("#videoURL").attr("src","video/UI设计完整.mp4");
+			$("#success_msg").show();
+			$("#lijiShopp_btn").val('已购买');
+			$("#videoMSG").text("此视频您已完成购买，现在播放的是完整版。");
+			$("#videoMSG").css('color','green');
+			$("#lijiShopp_btn").attr('disabled','disabled');
 			$.cookie('yssyxt_jifen', parseInt(yssyxt_jifen) - 2);
 			$("#Integral").text("积分"+parseInt(yssyxt_jifen) - 2);
-			$("#lijiShopp_span").text('已购买');
-			$("#lijiShopp_a").css({'pointer-events':'none','background':'#cac8c8'});
 		}
 	}
 	// 发表评论
