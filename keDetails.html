@@ -289,8 +289,9 @@
 			$("#videoMSG").text("此视频您已完成购买，现在播放的是完整版。");
 			$("#videoMSG").css('color','green');
 			$("#lijiShopp_btn").attr('disabled','disabled');
-			$.cookie('yssyxt_jifen', parseInt(yssyxt_jifen) - 2);
-			$("#Integral").text("积分"+parseInt(yssyxt_jifen) - 2);
+			var newjifen = parseInt(yssyxt_jifen) - 2;
+			$.cookie('yssyxt_jifen', newjifen);
+			$("#Integral").text("积分"+newjifen);
 		}
 	}
 	// 发表评论
